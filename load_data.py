@@ -34,11 +34,9 @@ for p in paths:
 #Data Preprocessing:::
 #add in data here, augmentation here too
 def data_preprocessing(image_path, label_path=None):
-
     print(f"Processing images in: {image_path}")
     if not isinstance(image_path, str):
         raise TypeError(f"Expected a string for image_path, but got {type(image_path)}")
-
 
     images, labels = [], []
 
@@ -64,10 +62,8 @@ def data_preprocessing(image_path, label_path=None):
                 label_file = os.path.join(label_path, file_name.replace('.png', '.txt'))
                 if os.path.exists(label_file):
                     with open(label_file, 'r') as f:
-                        #editing based on labael layout
                         labels.append(f.read().strip())
                 else:
-                    #missing values
                     labels.append(None)
 
     return np.array(images), labels
@@ -103,8 +99,9 @@ def data_augmentation(X_train, y_train, batch_size=32):
     )
 
 
-    train_data = datagen.flow(X_train, y_train, batch_size=batch_size)
-    return train_data
+    #train_data = datagen.flow(X_train, y_train, batch_size=batch_size)
+    #return train_data
+    return datagen.flow(X_train, y_train, batch_size=batch_size)
 
 
 
