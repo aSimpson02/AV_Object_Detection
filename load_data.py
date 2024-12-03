@@ -123,4 +123,4 @@ np.save('train_labels.npy', train_labels)
 np.save('test_images.npy', test_images)
 #np.save('test_calib.npy', test_calib)
 
-print("Data preprocessing complete. Files saved.")=
+print("Data preprocessing complete. Files saved.")

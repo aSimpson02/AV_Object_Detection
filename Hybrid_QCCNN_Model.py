@@ -1,5 +1,6 @@
 #Importing relevant libraries:::
 import numpy as np
+import qiskit
 from qiskit import Aer, QuantumCircuit, execute
 from qiskit.circuit import Parameter
 from qiskit.utils import QuantumInstance
