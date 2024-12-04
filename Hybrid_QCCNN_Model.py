@@ -24,9 +24,7 @@ train_labels = np.load(train_labels_path)
 
 
 
-
 #QUANTUM ENCODING :::
-
 #encoding using Ry rotationla gates here
 #classical data is scaled to [0, pi] and encoded into qubits [with Ry gates]
 def quantum_encoding(circuit, features):
