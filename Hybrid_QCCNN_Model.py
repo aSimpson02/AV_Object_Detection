@@ -1,7 +1,7 @@
 #Importing relevant libraries:::
 import numpy as np
 import qiskit
-from qiskit import Aer, QuantumCircuit, execute
+from qiskit import QuantumCircuit
 from qiskit.circuit import Parameter
 from qiskit.utils import QuantumInstance
 from sklearn.datasets import make_classification
@@ -44,8 +44,9 @@ def quantum_layer(circuit, params):
         circuit.cx(i, i + 1)
 
 
-#LEARNABLE QUANTUM CIRCUIT:::
 
+
+#LEARNABLE QUANTUM CIRCUIT:::
 #func to define number of qubits and the quantum circuit.
 #calling function to encoding layer to add encoding into the quantum circuit
 #calling the function of parametrized quantum layer 
